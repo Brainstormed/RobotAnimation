@@ -1,3 +1,9 @@
+@media(max-width: 500px) {
+    #robot {
+        transform: scale(1.125);
+    }
+}
+
 #robot {
     margin: auto;
     background: linear-gradient(35deg, #8400ff, #00ffff);
@@ -520,7 +526,7 @@
 .robot-shoulder1 {
     position: absolute;
     z-index: 5;
-    background-color: goldenrod;
+    background-color: rgb(215, 255, 170);
     top: 10px;
     bottom: 0px;
     right: 0px;
@@ -534,7 +540,7 @@
 .robot-shoulder2 {
     position: absolute;
     z-index: 5;
-    background-color: goldenrod;
+    background-color: rgb(215, 255, 170);
     top: 10px;
     bottom: 0px;
     right: 0px;
@@ -560,7 +566,7 @@
 
 .robot-shoulder-hider2 {
     position: absolute;
-    z-index: 5;
+    z-index: 10;
     background-color: rgb(190, 190, 190);
     top: 10px;
     bottom: 0px;
@@ -573,7 +579,7 @@
 
 .robot-arm1 {
     position: absolute;
-    z-index: 5;
+    z-index: 0;
     background-color: rgb(215, 255, 170);
     top: 15px;
     bottom: 0px;
@@ -591,10 +597,11 @@
     top: -50px;
     bottom: 0px;
     right: 0px;
-    left: -10px;
+    left: -20px;
     height: 70px;
     width: 27px;
     animation: arm1-wave 1000ms ease 0ms infinite forwards;
+    transform: rotate(-20deg);
 }
 
 .robot-arm1::before {
@@ -613,14 +620,14 @@
 
 .robot-arm2 {
     position: absolute;
-    z-index: 5;
+    z-index: 0;
     background-color: transparent;
     top: 10px;
     bottom: 0px;
     right: 0px;
-    left: 72px;
+    left: 80px;
     height: 90px;
-    width: 30px;
+    width: 20px;
     border-left: 25px solid transparent;
     border-right: 25px solid rgb(215, 255, 170);
     border-top: 25px solid transparent;
@@ -632,15 +639,16 @@
     position: relative;
     z-index: 100;
     background-color: rgb(255, 143, 143);
-    top: -80px;
+    top: -65px;
     bottom: 0px;
     right: 0px;
-    left: -15px;
-    height: 40px;
+    left: -43px;
+    height: 45px;
     width: 40px;
     border: 1px solid black;
     border-radius: 50%;
     animation: hand1-wave 1000ms ease 0ms infinite forwards;
+    transform: rotate(-75deg);
 }
 
 .robot-hand2 {
@@ -651,9 +659,10 @@
     bottom: 0px;
     right: 0px;
     left: 100px;
-    height: 40px;
+    height: 45px;
     width: 40px;
     border: 1px solid black;
+    transform: rotate(40deg);
     border-radius: 50%;
 }
 
@@ -737,13 +746,15 @@
 
 @keyframes arm1-wave {
     50% {
-        transform: rotate(-20deg);
+        transform: rotate(20deg);
+        left: 0px;
     }
 }
 
 @keyframes hand1-wave {
     50% {
-        top: -71px;
-        left: -32px;
+        top: -65px;
+        left: 8px;
+        transform: rotate(75deg);
     }
 }
